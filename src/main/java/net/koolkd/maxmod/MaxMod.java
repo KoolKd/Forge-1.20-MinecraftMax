@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 public class MaxMod {
     // Define mod id in a common place for everything to reference
     //HELLO
-    public static final String MOD_ID = "max";
+    public static final String MOD_ID = "assets/max";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     public MaxMod() {
