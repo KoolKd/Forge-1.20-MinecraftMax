@@ -1,6 +1,8 @@
 package net.koolkd.maxmod;
 
 import com.mojang.logging.LogUtils;
+import net.koolkd.maxmod.block.ModBlocks;
+import net.koolkd.maxmod.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,8 +21,7 @@ import org.slf4j.Logger;
 @Mod(MaxMod.MOD_ID)
 public class MaxMod {
     // Define mod id in a common place for everything to reference
-    //HELLO
-    public static final String MOD_ID = "assets/max";
+    public static final String MOD_ID = "max";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     public MaxMod() {
@@ -28,14 +29,15 @@ public class MaxMod {
 
         modEventBus.addListener(this::commonSetup);
 
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+
     }
 
     // Add the example block item to the building blocks tab
@@ -45,10 +47,8 @@ public class MaxMod {
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+    public void onServerStarting(ServerStartingEvent event) {
+
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

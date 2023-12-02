@@ -1,6 +1,7 @@
 package net.koolkd.maxmod.block;
 
 import net.koolkd.maxmod.MaxMod;
+import net.koolkd.maxmod.block.custom.ModFlammableRotatedPillarBlock;
 import net.koolkd.maxmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -21,9 +22,8 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, MaxMod.MOD_ID);
 
 //-----------------------------------------------------------------------------------------------------------
-    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> MAHOE_LOG = registerBlock("mahoe_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).strength(3f)));
 //-----------------------------------------------------------------------------------------------------------
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

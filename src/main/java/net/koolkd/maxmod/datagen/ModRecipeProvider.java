@@ -26,8 +26,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        oreSmelting(pWriter, List.of(ModItems.SAPPHIRE.get(), ModBlocks.SAPPHIRE_ORE.get()), RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
-        oreBlasting(pWriter, List.of(ModItems.SAPPHIRE.get(), ModBlocks.SAPPHIRE_ORE.get()), RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
+//        oreSmelting(pWriter, List.of(ModItems.SAPPHIRE.get(), ModBlocks.SAPPHIRE_ORE.get()), RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
+//        oreBlasting(pWriter, List.of(ModItems.SAPPHIRE.get(), ModBlocks.SAPPHIRE_ORE.get()), RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
 
 //        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.EXPERIMENTAL_ORE.get())
 //                .pattern("ERD")

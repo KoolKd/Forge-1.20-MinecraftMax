@@ -1,6 +1,7 @@
 package net.koolkd.maxmod.datagen;
 
 import net.koolkd.maxmod.MaxMod;
+import net.koolkd.maxmod.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -20,5 +21,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 //        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
 //                .add(ModBlocks.SAPPHIRE_ORE.get())
 //                .add(ModBlocks.EXPERIMENTAL_ORE.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAHOE_LOG.get());
+
+//                .add(ModBlocks.STRIPPED_MAHOE_LOG.get())
     }
 }
